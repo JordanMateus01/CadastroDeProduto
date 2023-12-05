@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página realizada através do conteúdo do curso">
+    <meta name="keywords" content="html, css e js">
+    <meta name="author" content="Jordan Mateus">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cadastro de produto</title>
+    
+</head>
+<body>
+    <h1 id="titulo">Cadastro de produtos</h1><br>
+    <form action="/" method="post">
+        <fieldset id="cadastroProduto">
+            <label for="codigoProduto">Código</label>
+                <input type="number" id="codProd" name="codProd"><br><br>
+            <label for="nomeProduto">Nome</label>
+                <input type="text" id="nomProd" name="nomProd" maxlength="50" size="30%" max-length="150"><br><br>
+            <label for="descricaoProduto">Descrição</label><br>
+                <textarea name="descProd" id="descProd" rows="6" cols="30%"  required max-length="800"></textarea><br><br>
+            <label for="valorPoduto">Valor</label>
+                <input type="number" id="valProd" name="valProd" required><br><br>
+            <input id="btnCadastro" type="button" value="Cadastrar" onclick="cadastrarProduto()">
+        </fieldset> 
+    </form><br>
+    
+    <table id="tabelaDeProdutos">
+        <thead>
+            <tr>
+                <th class="conteudo">Código</th>
+                <th class="conteudo">Nome</th>
+                <th class="conteudo">Descrição</th>
+                <th class="valor">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="linha">
+                <td class="conteudo" id="codigo"></td>
+                <td class="conteudo" id="nome"></td>
+                <td class="conteudo" id="descricao"></td>            
+                <td class="valor" id="valor"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

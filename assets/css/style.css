@@ -1,0 +1,124 @@
+:root {
+    --cor--principal: #f8ebee;
+    --cor--titulo: #d89864;
+    --cor--botao: #9999;
+    --fonte--principal: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62,5%; /* altera o valor base de fonte(16px) para 10px */
+    background-color: #313131;
+}
+
+* {
+    color: #f8ebee;
+    font-family: var(--fonte--principal);
+    /* limpando os padrões do navegador */
+    padding: 0;
+    margin: 0;
+    /* mantendo o tamanho padrão do container */
+    /* box-sizing: border-box; */
+}
+
+#titulo {
+    font-size: 3.0rem;
+    color: var(--cor--titulo);
+    text-align: center;
+}
+
+#cadastroProduto {
+    padding: 2% 2% 1% 2%;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cadastroProduto input, textarea{
+    border-radius: 3px;
+    padding: 0.40%;
+    background-color: #313131;
+}
+
+#btnCadastro:hover {
+    background-color: var(--cor--botao);
+}
+
+#btnCadastro {
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.conteudo {
+    text-align: left;
+}
+
+.valor {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;/* retira a duplicidade das bordas */
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background-color: rgba(184, 161, 161, 0.107);
+}
+
+.linha:hover {
+    background-color: rgb(41, 65, 86);
+}
+
+
+@media screen and (min-width:320px) and (max-width: 479px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+    #titulo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    #cadastroProduto {
+        width: 90%;
+        padding: 4% 4% 4% 5%;
+    }
+
+    table, th, td {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 599px) { /* smartphones, Android phones, landscape iPhone */ 
+    #titulo {
+        font-size: 2.4rem;
+    }
+    #cadastroProduto {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 800px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    #cadastroProduto {
+        width: 55%;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    #cadastroProduto {
+        width: 45%;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) { /* big landscape tablets, laptops, and desktops */
+    #cadastroProduto {
+        width: 35%;
+    }
+}
+@media screen and (min-width: 1281px) { /* hi-res laptops and desktops */ 
+    #cadastroProduto {
+        width: 30%;
+        /* padding: 2% 0% 2% 2%; */
+    }
+}
