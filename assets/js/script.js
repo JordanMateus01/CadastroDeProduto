@@ -1,19 +1,18 @@
-function cadastrarProduto(codigoProduto, nomeProduto, descricaoProduto, valorProduto){
-    var codigoProduto = document.getElementById("codProd").value;
-    var nomeProduto = document.getElementById("nomProd").value;
-    var descricaoProduto = document.getElementById("descProd").value;
-    var valorProduto = document.getElementById("valProd").value
+function cadastrarProduto(codProd, nomProd, descProd, valProd){
     var tabela = document.getElementById("tabelaDeProdutos");
+    var qtdlinhas =  tabela.rows.length;
+    var line = tabela.insertRow(qtdlinhas);
+    var botaoEdicao = document.getElementById("btnEdicao");
 
-    if(codigoProduto.length > 0 && nomeProduto.length > 0 && descricaoProduto.length > 0 && valorProduto.length > 0){
+    if(codProd.length > 0 && nomProd.length > 0 && descProd.length > 0 && valProd.length > 0){
         tabela.style.display = "table";
+        botaoEdicao.style.display = "block";
 
-        var codigo = document.getElementById("codigo").innerHTML = codigoProduto;
-        var nome = document.getElementById("nome").innerHTML = nomeProduto;
-        var descricao = document.getElementById("descricao").innerHTML = descricaoProduto;
-        var valor = document.getElementById("valor").innerHTML = "R$ " + valorProduto;
+        var codigo = line.insertCell(0).innerHTML = codProd;
+        var nome = line.insertCell(1).innerHTML = nomProd;
+        var descricao = line.insertCell(2).innerHTML = descProd;
+        var valor = line.insertCell(3).innerHTML = "R$ " + valProd;
     } else {
         alert("Preencha todos o campos.")
     }
-
 }

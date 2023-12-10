@@ -41,14 +41,13 @@ html {
     background-color: #313131;
 }
 
-#btnCadastro:hover {
+#btnCadastro:hover, #btnEdicao:hover, #btnNovoProduto:hover {
     background-color: var(--cor--botao);
 }
 
 #btnCadastro {
     display: block;
     margin: 0 auto;
-    
 }
 
 .conteudo {
@@ -62,6 +61,19 @@ html {
 #tabelaDeProdutos {
     display: none;
 }
+
+#btnEdicao, #btnNovoProduto {
+    display: block;
+    background-color: #313131;
+    margin: 0 auto;
+    padding: 0.1%;
+}
+
+#btnEdicao, #btnNovoProduto {
+    display: none;
+}
+
+
 
 table, th, td {
     border: 1px solid rgb(255, 255, 255);
@@ -78,7 +90,6 @@ th {
 .linha:hover {
     background-color: rgb(41, 65, 86);
 }
-
 
 @media screen and (min-width:320px) and (max-width: 479px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
     #titulo {

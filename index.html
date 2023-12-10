@@ -18,14 +18,14 @@
     <form action="/" method="post">
         <fieldset id="cadastroProduto">
             <label for="codigoProduto">Código</label>
-                <input type="number" id="codProd" name="codProd"><br><br>
+                <input type="number" id="codProd" name="codProd" placeholder="001"><br><br>
             <label for="nomeProduto">Nome</label>
-                <input type="text" id="nomProd" name="nomProd" maxlength="50" size="30%" max-length="150"><br><br>
+                <input type="text" id="nomProd" name="nomProd" maxlength="50" size="30%" max-length="150" placeholder="Cadeira ergométrica"><br><br>
             <label for="descricaoProduto">Descrição</label><br>
-                <textarea name="descProd" id="descProd" rows="6" cols="30%"  required max-length="800"></textarea><br><br>
+                <textarea name="descProd" id="descProd" rows="6" cols="30%"  required max-length="800" placeholder="Descrição da cadeira ergométrica"></textarea><br><br>
             <label for="valorPoduto">Valor</label>
-                <input type="number" id="valProd" name="valProd" required><br><br>
-            <input id="btnCadastro" type="button" value="Cadastrar" onclick="cadastrarProduto()">
+                <input type="number" id="valProd" name="valProd" required placeholder="1500"><br><br>
+            <input id="btnCadastro" type="button" value="Cadastrar" onclick="cadastrarProduto(codProd.value, nomProd.value, descProd.value, valProd.value)">
         </fieldset> 
     </form><br>
     
@@ -39,15 +39,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="linha">
-                <td class="conteudo" id="codigo"></td>
-                <td class="conteudo" id="nome"></td>
-                <td class="conteudo" id="descricao"></td>            
-                <td class="valor" id="valor"></td>
-            </tr>
+        
         </tbody>
     </table>
     <br>
+    <button id="btnEdicao" type="button" onclick="editarProduto()">Editar</button>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
