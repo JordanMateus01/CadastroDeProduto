@@ -13,11 +13,8 @@ html {
 * {
     color: #f8ebee;
     font-family: var(--fonte--principal);
-    /* limpando os padrões do navegador */
     padding: 0;
     margin: 0;
-    /* mantendo o tamanho padrão do container */
-    /* box-sizing: border-box; */
 }
 
 #titulo {
@@ -73,7 +70,18 @@ html {
     display: none;
 }
 
+textarea {
+    resize: none;
+}
 
+label {
+    float: left;
+}
+
+input, textarea {
+    margin-left: 5px;
+    border-color: #9b9292;
+}
 
 table, th, td {
     border: 1px solid rgb(255, 255, 255);
