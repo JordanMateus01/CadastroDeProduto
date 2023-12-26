@@ -14,4 +14,3 @@ function cadastrarProduto(codigoProduto, nomeProduto, descricaoProduto, valorPro
         alert("Preencha todos o campos.")
     }
 }
-
