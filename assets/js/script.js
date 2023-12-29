@@ -3,7 +3,7 @@ function cadastrarProduto(codigoProduto, nomeProduto, descricaoProduto, valorPro
     var qtdlinhas =  tabela.rows.length;
     var line = tabela.insertRow(qtdlinhas);
 
-    if(codProd.length > 0 && nomProd.length > 0 && descProd.length > 0 && valProd.length > 0){
+    if(codigoProduto.length > 0 && nomeProduto.length > 0 && descricaoProduto.length > 0 && valorProduto.length > 0){
         tabela.style.display = "table";
 
         var codigo = line.insertCell(0).innerHTML = codigoProduto;
